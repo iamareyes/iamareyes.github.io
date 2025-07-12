@@ -9,12 +9,10 @@ import expressiveCode from 'astro-expressive-code'
 import { expressiveCodeOptions } from './src/site.config'
 import icon from 'astro-icon'
 
-import vercel from '@astrojs/vercel/serverless'
-
 // https://astro.build/config
 export default defineConfig({
 	site: 'https://iamareyes.github.io',
-	base: '/iamareyes.github.io',
+	// base: '/iamareyes.github.io', // Commented out for local development
 	integrations: [
 		expressiveCode(expressiveCodeOptions),
 		tailwind({
@@ -43,7 +41,4 @@ export default defineConfig({
 	},
 	prefetch: true,
 	output: 'static'
-	// adapter: vercel({
-	// 	webAnalytics: { enabled: true }
-	// }),
 })
